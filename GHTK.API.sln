@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHTK.API", "GHTK.API\GHTK.API.csproj", "{574FA93D-E79B-4E80-9D31-B529F0020F69}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghtk.Authorization", "Ghtk.Authorization\Ghtk.Authorization.csproj", "{F5F6570E-0C3A-4BE9-90EC-DFD0BC196815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAuthentication", "ClientAuthentication\ClientAuthentication.csproj", "{347C91F7-01F8-4C94-823D-7DA4D1E2549F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAuthentication.API", "ClientAuthentication.API\ClientAuthentication.API.csproj", "{597DE5E0-093A-41CC-B1FA-AC97C024F72E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{F5F6570E-0C3A-4BE9-90EC-DFD0BC196815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5F6570E-0C3A-4BE9-90EC-DFD0BC196815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5F6570E-0C3A-4BE9-90EC-DFD0BC196815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{347C91F7-01F8-4C94-823D-7DA4D1E2549F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{347C91F7-01F8-4C94-823D-7DA4D1E2549F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{347C91F7-01F8-4C94-823D-7DA4D1E2549F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{347C91F7-01F8-4C94-823D-7DA4D1E2549F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{597DE5E0-093A-41CC-B1FA-AC97C024F72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597DE5E0-093A-41CC-B1FA-AC97C024F72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597DE5E0-093A-41CC-B1FA-AC97C024F72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597DE5E0-093A-41CC-B1FA-AC97C024F72E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

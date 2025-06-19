@@ -37,16 +37,16 @@ namespace Ghtk.Authorization
 
             if (!string.IsNullOrEmpty(clientSourceValue) &&
                 !string.IsNullOrEmpty(tokenValue) &&
-                VerifyClient(clientSourceValue, tokenValue))
+                VerifyClient(clientSourceValue, tokenValue,out var principal))
             {
 
 
 
-                var identity = new ClaimsIdentity(Scheme.Name);
+                //var identity = new ClaimsIdentity(Scheme.Name);
 
-                identity.AddClaim(new Claim("XClientSource", clientSourceValue));
+                //identity.AddClaim(new Claim("XClientSource", clientSourceValue));
 
-                var principal = new ClaimsPrincipal(identity); 
+                //var principal = new ClaimsPrincipal(identity); 
                 var ticket = new AuthenticationTicket(principal, Scheme.Name);
 
                 return Task.FromResult(AuthenticateResult.Success(ticket));
@@ -57,14 +57,15 @@ namespace Ghtk.Authorization
             }
         }
 
-        private bool VerifyClient(string clientSourceValue, string tokenValue)
+        private bool VerifyClient(string clientSourceValue, string tokenValue, out ClaimsPrincipal? principal)
         {
-            if (!Validate(tokenValue, out var token,out var principal))
+            if (!Validate(tokenValue, out var token,out principal))
             {
                 return false;
             }
 
-            if (clientSourceValue != principal?.FindFirst(ClaimTypes.Name)?.Value)
+            var sub = (token as JwtSecurityToken)!.Subject;
+            if (clientSourceValue != sub)
             {
                 return false;
             }

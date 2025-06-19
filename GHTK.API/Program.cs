@@ -1,4 +1,7 @@
+using ClientAuthentication;
 using Ghtk.Authorization;
+using GHTK.API.AuthenticationHandler;
+using Microsoft.AspNetCore.Builder;
 
 namespace GHTK.API
 {
@@ -10,12 +13,14 @@ namespace GHTK.API
 
             // Add services to the container.
 
+            IClientSourceAuthenticationHandler clientSourceAuthenticationHandler = new RemoteClientSourceAuthenticationHandler(builder.Configuration["AuthenticationService"] ?? throw new Exception("ClientAuthenticationServiceUrl not found"));
+
             builder.Services.AddControllers();
 
             builder.Services.AddAuthentication("XClientSource").AddXClientSource(
                     options =>
                     {
-                        options.ClientValidator = (clientSource,token, principal) => true;
+                        options.ClientValidator = (clientSource,token, principal) => clientSourceAuthenticationHandler.Validate(clientSource);
                         options.IssuerSigningKey = builder.Configuration["IssuerSigningKey"] ?? "";
                     }
                 );
@@ -26,7 +31,7 @@ namespace GHTK.API
             // Configure the HTTP request pipeline.
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
