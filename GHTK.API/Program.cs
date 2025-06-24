@@ -1,6 +1,7 @@
 using ClientAuthentication;
 using Ghtk.Authorization;
 using GHTK.API.AuthenticationHandler;
+using GHTK.Repository;
 using Microsoft.AspNetCore.Builder;
 
 namespace GHTK.API
@@ -25,6 +26,9 @@ namespace GHTK.API
                     }
                 );
 
+            builder.Services.AddMongoDbClient(builder.Configuration);
+
+            builder.Services.AddTransient<IOrderRepository, MongoDbOrderRepository > ();
 
             var app = builder.Build();
 
