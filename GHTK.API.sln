@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAuthentication.API", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHTK.Repository.Abstractions", "GHTK.Repository.Abstractions\GHTK.Repository.Abstractions.csproj", "{74838C2E-DC9C-4688-A004-C6B8AAEA368D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHTK.Repository.MongoDb", "GHTK.Repository.MongoDb\GHTK.Repository.MongoDb.csproj", "{2A2E6081-99B3-4D6F-AA0D-862490777341}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHTK.Repository.SqlServer", "GHTK.Repository.SqlServer\GHTK.Repository.SqlServer.csproj", "{6C07915D-9CB9-48F0-9697-14BAF699DA38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{74838C2E-DC9C-4688-A004-C6B8AAEA368D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74838C2E-DC9C-4688-A004-C6B8AAEA368D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74838C2E-DC9C-4688-A004-C6B8AAEA368D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A2E6081-99B3-4D6F-AA0D-862490777341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A2E6081-99B3-4D6F-AA0D-862490777341}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A2E6081-99B3-4D6F-AA0D-862490777341}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A2E6081-99B3-4D6F-AA0D-862490777341}.Release|Any CPU.Build.0 = Release|Any CPU
+               {6C07915D-9CB9-48F0-9697-14BAF699DA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+               {6C07915D-9CB9-48F0-9697-14BAF699DA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+               {6C07915D-9CB9-48F0-9697-14BAF699DA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+               {6C07915D-9CB9-48F0-9697-14BAF699DA38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
